@@ -1,0 +1,22 @@
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #101015;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar a {
+  color: #edecec;
+  font-size: 25px;
+  text-decoration: none;
+  margin: 10px;
+}
+/*# sourceMappingURL=Navbar.css.map */
