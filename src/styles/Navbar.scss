@@ -9,21 +9,45 @@
   justify-content: flex-start;
   align-items: center;
 
-  .logo a {
-    color: white;
+  .logo {
+    font {
+      color: rgb(19, 230, 19)
+    }
+
+    a {
+      font-size: 35px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: white;
+    }
   }
 
   .nav {
+    // Link List
     ul {
       list-style: none;
       display: flex;
     }
 
+    // Link Item(s)
     li a {
+      padding: 5px;
       color: $navtextColor;
       font-size: 25px;
+      font-weight: bold;
       text-decoration: none;
       margin: 10px;
+
+      &:hover {
+        background-color: rgb(255, 255, 255);
+        text-decoration: underline;
+        color:  $navbarColor;
+      }
+    }
+
+    .navButton {
+      float: right;
     }
   }
 }

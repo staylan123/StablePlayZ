@@ -14,7 +14,15 @@
           align-items: center;
 }
 
+.header .logo font {
+  color: #13e613;
+}
+
 .header .logo a {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
   color: white;
 }
 
@@ -26,9 +34,21 @@
 }
 
 .header .nav li a {
+  padding: 5px;
   color: white;
   font-size: 25px;
+  font-weight: bold;
   text-decoration: none;
   margin: 10px;
+}
+
+.header .nav li a:hover {
+  background-color: white;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.header .nav .navButton {
+  float: right;
 }
 /*# sourceMappingURL=Navbar.css.map */
