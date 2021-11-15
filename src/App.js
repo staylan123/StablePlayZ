@@ -7,8 +7,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import GameServers from "./pages/GameServers";
 import Faq from "./pages/Faq";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import Contact from "./pages/Contact";
+
+
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
         <Route path="game-servers" element={<GameServers />} />
         <Route path="faq" element={<Faq />} />
         <Route path="about-us" element={<About />} />
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<SignUp />} />
+        <Route path="support" element={<Contact />} />
+
       </Routes>
     </div>
   );

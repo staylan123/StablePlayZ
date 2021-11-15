@@ -3,6 +3,10 @@
 
 export const NavLinks = [
     {
+        navItemName: "Home",
+        url: "/"
+    },
+    {
         navItemName: "Game Servers",
         url: "/game-servers"
     },
@@ -13,5 +17,9 @@ export const NavLinks = [
     {
         navItemName: "About Us",
         url: "/about-us"
+    },
+    {
+        navItemName: "Contact Us",
+        url: "/support"
     }
 ]

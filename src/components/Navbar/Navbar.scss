@@ -1,0 +1,96 @@
+@import "../../sass/variables";
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $navDark;
+  color: $navText;
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin: 1.5rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    span {
+      color: $navLogo;
+    }
+  }
+
+  .navBarLinks {
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        font-size: 1.25rem;
+        list-style: none;
+
+        a {
+          color: white;
+          text-decoration: none;
+          padding: 2rem;
+          display: block;
+
+          &:hover {
+            background-color: rgb(70, 70, 70);
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+  }
+}
+
+// Laptops and Smaller Screens
+@media screen and (max-width: 920px) {
+  .navBar .navBarLinks ul li a {
+    font-size: 1rem;
+  }
+}
+
+// Mobile/Tablet View
+@media screen and (max-width: 845px) {
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .navBarLinks {
+      width: 100%;
+    }
+
+    ul {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    li {
+      text-align: center;
+    }
+
+    a {
+      padding: 1rem;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+}

@@ -1,38 +1,41 @@
-import React from "react";
-import "../../styles/Navbar.css";
+import React, { useState } from "react";
+import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { NavLinks } from "./NavLinks";
+import { FaBars, FaTimesCircle } from "react-icons/fa";
 
 function Navbar() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMobile(!isMobile);
+  };
 
   // Creates an li Link for ever item the NavLink.js object array (index is for map key)
-  const navLinks = NavLinks.map(({ navItemName, url }, index) => {
+  const createNavLinks = NavLinks.map(({ navItemName, url }, index) => {
     return (
-      <li key={index}>
+      <li className="navItem" key={index}>
         <NavLink to={url}>{navItemName}</NavLink>
       </li>
     );
   });
 
   return (
-    <header className="header">
+    <navbar className="navBar">
       <div className="logo">
         <NavLink to="/">
-          Stable<font>PlayZ</font>
+          Stable<span>PlayZ</span>
         </NavLink>
       </div>
-      <nav className="nav">
-        <ul>
-          {navLinks}
-            <button className="navButton">
-              <NavLink to="/signup">Sign Up</NavLink>
-            </button>
-            <button className="navButton">
-              <NavLink to="/login">Login</NavLink>
-            </button>
-        </ul>
-      </nav>
-    </header>
+      <button onClick={toggleMenu} className="hamburger">
+        {isMobile ? <FaTimesCircle size={25} /> : <FaBars size={25} />}
+      </button>
+      {!isMobile && (
+        <div className="navBarLinks">
+          <ul>{createNavLinks}</ul>
+        </div>
+      )}
+    </navbar>
   );
 }
 
